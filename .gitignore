@@ -1,0 +1,26 @@
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables (passwords)
+.env
+
+# Generated Big Data & Runtime files
+data/raw_events/*
+data/batch_inbox/*
+data/checkpoints/*
+data/logs/*
+!data/**/.gitkeep
+
+# Airflow & Spark temporary logs
+airflow/logs/
+spark-warehouse/
+metastore_db/
+derby.log
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
