@@ -82,10 +82,13 @@ services:
       - fleet_net
 
   airflow:
-    image: apache/airflow:2.9.3-python3.11
+    build:
+      context: ./airflow
+      dockerfile: Dockerfile
+    image: fleet-airflow-spark:2.9.3
     container_name: fleet_airflow
     restart: unless-stopped
-    mem_limit: 1200m
+    mem_limit: 2048m
     depends_on:
       postgres:
         condition: service_healthy
